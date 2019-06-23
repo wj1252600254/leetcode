@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.Objects;
 
 public class 统计做了多少算法题 {
     int count = 0;
@@ -18,7 +19,7 @@ public class 统计做了多少算法题 {
     }
 
     public static void main(String[] args) {
-        统计做了多少算法题 scanFile = new 统计做了多少算法题("H:\\javaproject\\Leetcdd\\src", 2, 12);
+        统计做了多少算法题 scanFile = new 统计做了多少算法题("H:\\javaproject\\Leetcdd\\src\\com\\leetcode", 0, 20);
     }
 
     private void cout(File[] files) {
@@ -26,7 +27,7 @@ public class 统计做了多少算法题 {
             if (!file.isDirectory()) {
                 count++;
             } else {
-                cout(file.listFiles());
+                cout(Objects.requireNonNull(file.listFiles()));
             }
         }
     }
