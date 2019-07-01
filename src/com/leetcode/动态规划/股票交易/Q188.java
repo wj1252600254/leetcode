@@ -10,7 +10,8 @@ public class Q188 {
      * <p>
      * buy[j] = max(buy[j], sell[j-1] - prices[i])
      * sell[j] = max(sell[j], buy[j] + prices[i])
-     *卖出的钱不可能是负的
+     * 卖出的钱不可能是负的
+     *
      * @param k
      * @param prices
      * @return
@@ -32,12 +33,26 @@ public class Q188 {
         int[] buy = new int[k + 1];
         int[] sell = new int[k + 1];
         Arrays.fill(buy, Integer.MIN_VALUE);
-        for (int i = 0; i < prices.length; i++) {
-            for (int j = 1; j <= k; j++) {
-                buy[j] = Math.max(buy[j], sell[j - 1] - prices[i]);
-                sell[j] = Math.max(sell[j], buy[j] + prices[i]);
+//        for (int i = 0; i < prices.length; i++) {
+//            for (int j = 1; j <= k; j++) {
+//                buy[j] = Math.max(buy[j], sell[j - 1] - prices[i]);
+//                sell[j] = Math.max(sell[j], buy[j] + prices[i]);
+//            }
+//        }
+
+
+        for (int i = 1; i <= k; i++) {
+            for (int j = 0; j <prices.length; j++) {
+                buy[i] = Math.max(buy[i], sell[i - 1] - prices[j]);
+                sell[i] = Math.max(sell[i], buy[i] + prices[j]);
             }
         }
+//        return Math.max(sel, buyNow);
         return sell[k];
+    }
+
+    //空间优化
+    {
+
     }
 }

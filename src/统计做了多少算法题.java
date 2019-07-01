@@ -19,7 +19,7 @@ public class 统计做了多少算法题 {
     }
 
     public static void main(String[] args) {
-        统计做了多少算法题 scanFile = new 统计做了多少算法题("H:\\javaproject\\Leetcdd\\src\\com\\leetcode", 0, 20);
+        统计做了多少算法题 scanFile = new 统计做了多少算法题("H:\\javaproject\\Leetcdd\\src\\com\\leetcode", 0, 24);
     }
 
     private void cout(File[] files) {

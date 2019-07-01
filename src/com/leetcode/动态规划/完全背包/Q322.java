@@ -33,14 +33,14 @@ public class Q322 {
      */
     public int coinChange1(int[] coins, int amount) {
         int[] dp = new int[amount + 1];
+        dp[0] = 1;
         for (int i = 1; i <= amount; i++) {
             int min = Integer.MAX_VALUE;
             for (int coin : coins) {
                 if (coin > i) {
                     break;
-                } else {
-                    min = Math.min(dp[i - coin] + 1, dp[i]);
                 }
+                min = Math.min(min, dp[i - 1]);
             }
             dp[i] = min;
         }

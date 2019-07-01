@@ -9,7 +9,6 @@ public class Q53 {
             max = Math.max(cur, max);
             if (cur < 0) {
                 cur = 0;
-                continue;
             }
 
         }
