@@ -14,6 +14,7 @@ public class Q34 {
         if (start == nums.length || nums[start] != target) {
             return new int[]{-1, -1};
         } else {
+            //last可能为负值，因为如果说target+1<nums[0]，那么last取值为-1,不可能！！！！！！！！！！！！可以不加
             return new int[]{start, Math.max(start, end)};
         }
     }
