@@ -40,5 +40,6 @@ public class Q95 {
             }
         }
         return list;
+
     }
 }
