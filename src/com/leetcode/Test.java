@@ -3,8 +3,6 @@ package com.leetcode;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.Inet4Address;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Arrays;
@@ -14,7 +12,9 @@ import java.util.regex.Pattern;
 
 public class Test {
     public static void main(String[] args) {
-
+        StringBuilder sb = new StringBuilder();
+        sb.append("abcdefg");
+        System.out.println(sb.delete(0,1));
         StringBuilder stringBuilder = new StringBuilder();
         Formatter formatter = new Formatter(stringBuilder);
         formatter.format("%1$04d, %2$.3f %n", 1, Double.valueOf("3.131445"));
